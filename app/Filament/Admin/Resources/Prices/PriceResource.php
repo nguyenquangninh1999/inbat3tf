@@ -21,6 +21,7 @@ class PriceResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $navigationLabel = 'Bảng giá';
+    protected static bool $shouldRegisterNavigation = false;
     protected static ?string $modelLabel = 'Bảng giá';
     protected static ?string $pluralModelLabel = 'Bảng giá';
     protected static ?string $recordTitleAttribute = 'name';

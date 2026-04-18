@@ -25,6 +25,11 @@ class ConsultationResource extends Resource
     protected static ?string $pluralModelLabel = 'Tư vấn báo giá';
     protected static ?string $recordTitleAttribute = 'name';
 
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
     public static function form(Schema $schema): Schema
     {
         return ConsultationForm::configure($schema);
@@ -46,7 +51,6 @@ class ConsultationResource extends Resource
     {
         return [
             'index' => ListConsultations::route('/'),
-            'create' => CreateConsultation::route('/create'),
             'edit' => EditConsultation::route('/{record}/edit'),
         ];
     }
