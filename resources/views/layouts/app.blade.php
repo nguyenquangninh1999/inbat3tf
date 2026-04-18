@@ -168,10 +168,10 @@
             <p class="text-xs text-purple-300 uppercase mb-1">Xưởng in bạt quảng cáo – Nhà máy in 3TF</p>
             <p class="text-base font-bold uppercase text-white mb-4">Công ty TNHH In 3TF</p>
             <div class="space-y-2 text-sm text-purple-200">
-                <div class="flex items-start gap-2"><span>📍</span><span>CT10 P. Văn Phú, KĐT Văn Phú, Hà Đông, HN</span></div>
-                <div class="flex items-center gap-2"><span>📞</span><span>Hotline: 0977.898.283</span></div>
-                <div class="flex items-center gap-2"><span>✉️</span><span>Email: info@inbatquangcao.com</span></div>
-                <div class="flex items-center gap-2"><span>🌐</span><span>Website: www.inbatquangcao.com</span></div>
+                <div class="flex items-start gap-2"><span>📍</span><span>Địa chỉ: THÚY LĨNH, LĨNH NAM, HN</span></div>
+                <div class="flex items-center gap-2"><span>📞</span><span>Hotline: 0987654321</span></div>
+                <div class="flex items-center gap-2"><span>✉️</span><span>Email: info@inbat3tf.com</span></div>
+                <div class="flex items-center gap-2"><span>🌐</span><span>Website: www.inbat3tf.com</span></div>
             </div>
         </div>
 
@@ -223,21 +223,21 @@
             <a href="#" class="hover:text-orange-400">Dự án</a>
             <a href="#" class="hover:text-orange-400">Tư vấn</a>
         </div>
-        <p class="text-center text-xs text-purple-400">Copyright © 2008 – 2025 | In Bạt Quảng Cáo – Thiết kế Web & Vận hành bởi CÔNG NGHỆ VIỆT JSC</p>
+        <p class="text-center text-xs text-purple-400">Copyright © 2008 – 2025 | In Bạt Quảng Cáo – Thiết kế Web & Vận hành bởi CÔNG TY 3TF</p>
     </div>
 </footer>
 
 <!-- Floating buttons + Hỗ trợ 24/7 -->
 <div class="fixed bottom-6 left-4 z-50 flex flex-col gap-4">
     <!-- Zalo -->
-    <a href="https://zalo.me/0977898283" target="_blank"
+    <a href="https://zalo.me/0987654321" target="_blank"
        class="relative w-12 h-12 rounded-full flex items-center justify-center shadow-xl pulse-blue"
        style="background:#0068ff;" title="Zalo">
         <img src="/icons8-zalo.svg" class="w-7 h-7" alt="Zalo">
     </a>
 
     <!-- Phone -->
-    <a href="tel:0977898283"
+    <a href="tel:0987654321"
        class="relative w-12 h-12 bg-red-500 rounded-full flex items-center justify-center shadow-xl pulse-red" title="Gọi ngay">
         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
     </a>
@@ -245,7 +245,7 @@
 
 <!-- Hỗ trợ 24/7 bottom right -->
 <div class="fixed bottom-6 right-4 z-50">
-    <a href="tel:0977898283" onclick="openPopup(); return false;"
+    <a href="tel:0987654321" onclick="openPopup(); return false;"
        class="flex items-center gap-2 bg-red-500 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg float" style="animation-delay:.6s">
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
         Hỗ trợ 24/7
