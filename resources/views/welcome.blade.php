@@ -10,17 +10,26 @@
 
         <!-- Slide 1 -->
         <div class="relative min-w-full h-full">
-            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80" class="w-full h-full object-cover" alt="slide 1">
+            <picture>
+                <source media="(max-width: 767px)" srcset="/mb2.jpg">
+                <img src="/sl03.jpg" class="w-full h-full object-cover" alt="slide 1">
+            </picture>
         </div>
 
         <!-- Slide 2 -->
         <div class="relative min-w-full h-full">
-            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&q=80" class="w-full h-full object-cover" alt="slide 2">
+            <picture>
+                <source media="(max-width: 767px)" srcset="/mb4.jpg">
+                <img src="/sl04.jpg" class="w-full h-full object-cover" alt="slide 2">
+            </picture>
         </div>
 
         <!-- Slide 3 -->
         <div class="relative min-w-full h-full">
-            <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?w=1600&q=80" class="w-full h-full object-cover" alt="slide 3">
+            <picture>
+                <source media="(max-width: 767px)" srcset="/kh-1.png">
+                <img src="/sl05.jpg" class="w-full h-full object-cover" alt="slide 3">
+            </picture>
         </div>
 
     </div>
