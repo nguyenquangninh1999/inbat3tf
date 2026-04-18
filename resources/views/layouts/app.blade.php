@@ -96,10 +96,10 @@
 
         <!-- Logo -->
         <div class="flex items-center gap-2 md:gap-3 shrink-0">
-            <div class="w-9 h-9 md:w-11 md:h-11 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0">BC</div>
+            <div class="w-9 h-9 md:w-11 md:h-11 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 ring-2 ring-white">3TF</div>
             <div class="leading-tight">
                 <div class="text-[9px] md:text-[10px] uppercase tracking-wider opacity-80">Xưởng in bạt quảng cáo</div>
-                <div class="text-sm md:text-base font-bold uppercase">Nhà máy in BC</div>
+                <div class="text-sm md:text-base font-bold uppercase">Nhà máy in 3TF</div>
             </div>
         </div>
 
@@ -123,10 +123,10 @@
             <button onclick="openSidebar()" class="hover:text-orange-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
-            <a href="tel:" class="w-8 h-8 md:w-9 md:h-9 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-400">
+            <a href="tel:" class="w-8 h-8 md:w-9 md:h-9 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-400 ring-2 ring-white">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
             </a>
-            <a href="#" onclick="openPopup(); return false;" class="w-8 h-8 md:w-9 md:h-9 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-400">
+            <a href="#" onclick="openPopup(); return false;" class="w-8 h-8 md:w-9 md:h-9 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-400 ring-2 ring-white">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
             </a>
         </div>
@@ -159,14 +159,14 @@
         <!-- Col 1: Logo + Info -->
         <div>
             <div class="flex items-center gap-3 mb-3">
-                <div class="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold shrink-0">BC</div>
+                <div class="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ring-2 ring-white">3TF</div>
                 <div>
                     <div class="text-xs uppercase text-orange-400 tracking-wider">Xưởng in bạt quảng cáo</div>
-                    <div class="text-xl font-bold uppercase">Nhà máy in BC</div>
+                    <div class="text-xl font-bold uppercase">Nhà máy in 3TF</div>
                 </div>
             </div>
-            <p class="text-xs text-purple-300 uppercase mb-1">Xưởng in bạt quảng cáo – Nhà máy in BC</p>
-            <p class="text-base font-bold uppercase text-white mb-4">Công ty TNHH In BC</p>
+            <p class="text-xs text-purple-300 uppercase mb-1">Xưởng in bạt quảng cáo – Nhà máy in 3TF</p>
+            <p class="text-base font-bold uppercase text-white mb-4">Công ty TNHH In 3TF</p>
             <div class="space-y-2 text-sm text-purple-200">
                 <div class="flex items-start gap-2"><span>📍</span><span>CT10 P. Văn Phú, KĐT Văn Phú, Hà Đông, HN</span></div>
                 <div class="flex items-center gap-2"><span>📞</span><span>Hotline: 0977.898.283</span></div>
@@ -245,7 +245,7 @@
 
 <!-- Hỗ trợ 24/7 bottom right -->
 <div class="fixed bottom-6 right-4 z-50">
-    <a href="tel:0977898283"
+    <a href="tel:0977898283" onclick="openPopup(); return false;"
        class="flex items-center gap-2 bg-red-500 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg float" style="animation-delay:.6s">
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
         Hỗ trợ 24/7

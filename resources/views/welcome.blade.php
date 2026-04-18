@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Carousel -->
-<div class="relative w-full overflow-hidden" style="height: 600px;">
+<div class="relative w-full overflow-hidden" style="height: 500px;">
 
     <!-- Slides -->
     <div id="carousel" class="flex h-full transition-transform duration-700 ease-in-out">
@@ -88,7 +88,7 @@
 
         <!-- Right: Image + badge -->
         <div class="relative" style="overflow: visible;">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Xưởng in" class="w-full rounded-lg object-cover" style="height: 340px;">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Xưởng in" class="w-full rounded-lg object-cover">
 
             <!-- Badge đè lên góc dưới trái ảnh, dịch sang trái 50px -->
             <div class="absolute float text-white rounded-xl shadow-lg hidden md:flex items-center px-6 py-4 gap-6" style="bottom: 64px; left: -100px; min-width: 220px; background: linear-gradient(to right, #d946a8, #9333ea, #5b21b6); font-family: 'Poppins', sans-serif !important;">
