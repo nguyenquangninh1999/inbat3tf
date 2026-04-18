@@ -3,7 +3,7 @@
 namespace App\Filament\Admin\Resources\Products\Schemas;
 
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
@@ -23,10 +23,8 @@ class ProductForm
                     ->required()
                     ->numeric()
                     ->prefix('₫'),
-
-                Textarea::make('description')
+                RichEditor::make('description')
                     ->label('Mô tả')
-                    ->rows(4)
                     ->columnSpanFull(),
 
                 TextInput::make('link_video')

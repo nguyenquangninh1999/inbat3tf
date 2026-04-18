@@ -32,16 +32,6 @@ class ProductsTable
                     ->money('VND')
                     ->sortable(),
 
-                TextColumn::make('description')
-                    ->label('Mô tả')
-                    ->limit(50),
-
-                TextColumn::make('link_video')
-                    ->label('Link video')
-                    ->limit(30)
-                    ->url(fn ($record) => $record->link_video)
-                    ->openUrlInNewTab(),
-
                 TextColumn::make('created_at')
                     ->label('Ngày tạo')
                     ->dateTime('d/m/Y')
@@ -49,9 +39,10 @@ class ProductsTable
             ])
             ->filters([])
             ->recordActions([
-                EditAction::make(),
-                DeleteAction::make(),
+                EditAction::make()->label('Sửa'),
+                DeleteAction::make()->label('Xóa'),
             ])
+            ->actionsColumnLabel('Thao tác')
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
