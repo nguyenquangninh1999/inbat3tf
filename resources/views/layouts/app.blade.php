@@ -98,7 +98,9 @@
 
         <!-- Logo -->
         <div class="flex items-center gap-2 md:gap-3 shrink-0">
-            <div class="w-9 h-9 md:w-11 md:h-11 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 ring-2 ring-white">3TF</div>
+            <div class="w-9 h-9 md:w-11 md:h-11 shrink-0 rounded-full overflow-hidden">
+                <img src="/favicon.svg" class="w-full h-full" alt="3TF">
+            </div>
             <div class="leading-tight">
                 <div class="text-[9px] md:text-[10px] uppercase tracking-wider opacity-80">Xưởng in bạt quảng cáo</div>
                 <div class="text-sm md:text-base font-bold uppercase">Nhà máy in 3TF</div>
@@ -161,7 +163,9 @@
         <!-- Col 1: Logo + Info -->
         <div>
             <div class="flex items-center gap-3 mb-3">
-                <div class="w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ring-2 ring-white">3TF</div>
+                <div class="w-14 h-14 shrink-0 rounded-full overflow-hidden">
+                    <img src="/favicon.svg" class="w-full h-full" alt="3TF">
+                </div>
                 <div>
                     <div class="text-xs uppercase text-orange-400 tracking-wider">Xưởng in bạt quảng cáo</div>
                     <div class="text-xl font-bold uppercase">Nhà máy in 3TF</div>
