@@ -35,12 +35,12 @@
     </div>
 
     <!-- Prev button -->
-    <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/60 text-white flex items-center justify-center hover:bg-white/20 transition">
+    <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/60 text-white hidden md:flex items-center justify-center hover:bg-white/20 transition">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
     </button>
 
     <!-- Next button -->
-    <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/60 text-white flex items-center justify-center hover:bg-white/20 transition">
+    <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/60 text-white hidden md:flex items-center justify-center hover:bg-white/20 transition">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </button>
 
@@ -392,7 +392,7 @@
     // Responsive carousel height
     function setCarouselHeight() {
         const el = document.getElementById('carousel-wrapper');
-        if (el) el.style.height = window.innerWidth >= 768 ? '600px' : '390px';
+        if (el) el.style.height = window.innerWidth >= 768 ? '730px' : '390px';
     }
     setCarouselHeight();
     window.addEventListener('resize', setCarouselHeight);
