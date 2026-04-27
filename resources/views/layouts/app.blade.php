@@ -344,6 +344,10 @@
 
     function scrollToSection(id) {
         event.preventDefault();
+        if (window.location.pathname !== '/') {
+            window.location.href = '/#' + id;
+            return;
+        }
         const el = document.getElementById(id);
         if (!el) return;
         const offset = document.querySelector('header').offsetHeight;
