@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ConsultationMail;
 use App\Models\Consultation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ConsultationController extends Controller
 {
@@ -23,6 +25,15 @@ class ConsultationController extends Controller
             'note'   => $request->note,
             'status' => 1,
         ]);
+
+        // Gửi email
+        $to = config('mail.from.address');
+        Mail::to($to)->send(new ConsultationMail(
+            $request->name,
+            $request->phone,
+            $request->email,
+            $request->note,
+        ));
 
         return response()->json(['success' => true]);
     }

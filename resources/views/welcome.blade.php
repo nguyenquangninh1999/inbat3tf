@@ -396,6 +396,9 @@
     // Submit form đăng ký nhận tư vấn
     document.getElementById('form-dangky').addEventListener('submit', async function(e) {
         e.preventDefault();
+        const btn = this.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Đang gửi...';
         const data = new FormData(this);
         const res = await fetch('/consultation', { method: 'POST', body: data });
         const json = await res.json();
@@ -403,7 +406,14 @@
             this.reset();
             const msg = document.getElementById('dangky-msg');
             msg.classList.remove('hidden');
-            setTimeout(() => msg.classList.add('hidden'), 3000);
+            setTimeout(() => {
+                msg.classList.add('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Gửi yêu cầu';
+            }, 3000);
+        } else {
+            btn.disabled = false;
+            btn.textContent = 'Gửi yêu cầu';
         }
     });
 </script>

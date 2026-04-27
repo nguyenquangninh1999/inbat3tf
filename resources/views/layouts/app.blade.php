@@ -309,6 +309,9 @@
     // Submit form popup
     document.getElementById('form-tuvan').addEventListener('submit', async function(e) {
         e.preventDefault();
+        const btn = this.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Đang gửi...';
         const form = e.target;
         const data = new FormData(form);
         const res = await fetch('/consultation', { method: 'POST', body: data });
@@ -319,7 +322,12 @@
             setTimeout(() => {
                 closePopup();
                 document.getElementById('popup-msg').classList.add('hidden');
+                btn.disabled = false;
+                btn.textContent = 'Gửi yêu cầu';
             }, 2000);
+        } else {
+            btn.disabled = false;
+            btn.textContent = 'Gửi yêu cầu';
         }
     });
 
