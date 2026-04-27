@@ -120,19 +120,15 @@
             <h1 class="text-gray-800 font-semibold mt-1 text-2xl">Khẳng định đẳng cấp, vươn tầm thương hiệu</h1>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            @foreach([
-                'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-                'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80',
-                'https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?w=600&q=80',
-                'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=80',
-                'https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&q=80',
-                'https://images.unsplash.com/photo-1524234107056-1c1f48f64ab8?w=600&q=80',
-                'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80',
-                'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80',
-            ] as $img)
-            <div class="overflow-hidden rounded-xl group cursor-pointer aspect-square">
-                <img src="{{ $img }}" alt="sản phẩm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
+            @foreach(\App\Models\Product::latest()->take(8)->get() as $product)
+            <a href="{{ route('product.show', $product->id) }}" class="overflow-hidden rounded-xl group cursor-pointer aspect-square block">
+                @if($product->image)
+                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                @else
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400 text-sm">{{ $product->name }}</div>
+                @endif
+            </a>
             @endforeach
         </div>
     </div>
