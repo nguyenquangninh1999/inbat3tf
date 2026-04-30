@@ -106,7 +106,7 @@
     <div class="w-full px-4 md:px-12 flex items-center justify-between h-14 md:h-16">
 
         <!-- Logo -->
-        <div class="flex items-center gap-2 md:gap-3 shrink-0">
+        <a href="/" class="flex items-center gap-2 md:gap-3 shrink-0">
             <div class="w-9 h-9 md:w-11 md:h-11 shrink-0 rounded-full overflow-hidden">
                 <img src="/favicon.svg" class="w-full h-full" alt="3TF">
             </div>
@@ -114,9 +114,7 @@
                 <div class="text-[9px] md:text-[10px] uppercase tracking-wider opacity-80">Xưởng in bạt quảng cáo</div>
                 <div class="text-sm md:text-base font-bold uppercase">Nhà máy in 3TF</div>
             </div>
-        </div>
-
-        <!-- Nav desktop -->
+        </a>
         <nav class="hidden xl:flex items-center gap-6 text-sm font-semibold uppercase tracking-widest">
             <a href="#" onclick="scrollToSection('ve-chung-toi')" class="hover:text-orange-300 whitespace-nowrap">Về chúng tôi</a>
             <a href="#" onclick="scrollToSection('san-pham')" class="hover:text-orange-300 whitespace-nowrap">Sản phẩm</a>
