@@ -10,8 +10,7 @@ return new class extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->decimal('price', 10, 2);
+            $table->longText('table_prices')->nullable();
             $table->timestamps();
         });
     }

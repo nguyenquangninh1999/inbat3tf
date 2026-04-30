@@ -2,7 +2,7 @@
 
 namespace App\Filament\Admin\Resources\Prices\Schemas;
 
-use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Schema;
 
 class PriceForm
@@ -11,16 +11,10 @@ class PriceForm
     {
         return $schema
             ->components([
-                TextInput::make('name')
-                    ->label('Tên')
+                RichEditor::make('table_prices')
+                    ->label('Bảng giá')
                     ->required()
-                    ->maxLength(255),
-
-                TextInput::make('price')
-                    ->label('Giá')
-                    ->required()
-                    ->numeric()
-                    ->prefix('₫'),
+                    ->columnSpanFull(),
             ]);
     }
 }

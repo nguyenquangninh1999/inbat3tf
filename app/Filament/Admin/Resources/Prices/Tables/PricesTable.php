@@ -15,30 +15,25 @@ class PricesTable
     {
         return $table
             ->columns([
-                TextColumn::make('name')
-                    ->label('Tên')
-                    ->searchable()
-                    ->sortable(),
-
-                TextColumn::make('price')
-                    ->label('Giá')
-                    ->money('VND')
-                    ->sortable(),
-
-                TextColumn::make('created_at')
-                    ->label('Ngày tạo')
-                    ->dateTime('d/m/Y')
+                TextColumn::make('id')->label('ID')->sortable(),
+                TextColumn::make('table_prices')
+                    ->label('Bảng giá')
+                    ->html()
+                    ->limit(80),
+                TextColumn::make('updated_at')
+                    ->label('Cập nhật')
+                    ->dateTime('d/m/Y H:i')
                     ->sortable(),
             ])
+            ->defaultSort('updated_at', 'desc')
             ->filters([])
             ->recordActions([
-                EditAction::make(),
-                DeleteAction::make(),
+                EditAction::make()->label('Sửa'),
+                DeleteAction::make()->label('Xóa'),
             ])
+            ->actionsColumnLabel('Thao tác')
             ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
+                BulkActionGroup::make([DeleteBulkAction::make()]),
             ]);
     }
 }

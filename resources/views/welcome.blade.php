@@ -139,11 +139,21 @@
     <div class="max-w-7xl mx-auto">
         <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">Bảng giá in Bạt Quảng Cáo lớn nhất Miền Bắc</h1>
 
-        <!-- 2 ảnh bảng giá -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <img src="/z5-2.jpg" alt="Bảng giá In UV" class="w-full rounded-lg border border-gray-200 shadow-sm">
-            <img src="/inuv.png" alt="Bảng giá In Mực Dầu" class="w-full rounded-lg border border-gray-200 shadow-sm">
+        <!-- Bảng giá từ DB -->
+        @php $prices = \App\Models\Price::latest()->get(); @endphp
+        @if($prices->count())
+        <div class="mb-6 overflow-x-auto">
+            <style>
+                .price-content table { width:100%; border-collapse:collapse; margin-bottom:24px; }
+                .price-content td, .price-content th { border:1px solid #d1d5db; padding:8px 12px; }
+            </style>
+            @foreach($prices as $price)
+                <div class="price-content mb-8">
+                    {!! $price->table_prices !!}
+                </div>
+            @endforeach
         </div>
+        @endif
 
         <!-- Slogan -->
         <p class="text-center text-gray-600 italic text-sm md:text-base mb-8">
