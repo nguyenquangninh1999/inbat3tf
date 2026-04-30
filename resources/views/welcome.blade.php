@@ -190,30 +190,18 @@
             <p class="text-gray-500 mb-6 text-center md:text-left" style="font-size:16px;">Chúng tôi tự hào là nhà cung cấp <span class="font-semibold text-gray-700">In Bạt Quảng Cáo</span> lớn nhất miền Bắc</p>
 
             <div class="flex flex-col gap-4 flex-1">
-                <!-- Item 1 -->
+                @php $promotions = \App\Models\Promotion::get(); @endphp
+                @forelse($promotions as $i => $promo)
                 <div class="flex items-center gap-4 border border-gray-200 rounded-xl p-4 shadow-sm border-l-4 border-l-[#5b2d8e] flex-1">
                     <img src="/icon-4-right.png" class="w-12 h-12 shrink-0 object-contain" alt="icon">
                     <div>
-                        <div class="font-bold text-gray-800 uppercase text-sm mb-1">01. Ưu đãi giảm giá</div>
-                        <p class="text-gray-500 text-sm">Giảm giá lên tới 20% cho khách hàng đặt hàng ngay hôm nay, giảm 10% cho sản phẩm tiếp theo.</p>
+                        <div class="font-bold text-gray-800 uppercase text-sm mb-1">{{ $promo->title ?? '' }}</div>
+                        <p class="text-gray-500 text-sm">{{ $promo->description ?? '' }}</p>
                     </div>
                 </div>
-                <!-- Item 2 -->
-                <div class="flex items-center gap-4 border border-gray-200 rounded-xl p-4 shadow-sm border-l-4 border-l-[#5b2d8e] flex-1">
-                    <img src="/icon-4-right.png" class="w-12 h-12 shrink-0 object-contain" alt="icon">
-                    <div>
-                        <div class="font-bold text-gray-800 uppercase text-sm mb-1">02. Miễn phí thiết kế</div>
-                        <p class="text-gray-500 text-sm">Miễn phí thiết kế, không giới hạn số lần điều chỉnh. In trên được nhiều chất liệu, tốc độ in nhanh chóng.</p>
-                    </div>
-                </div>
-                <!-- Item 3 -->
-                <div class="flex items-center gap-4 border border-gray-200 rounded-xl p-4 shadow-sm border-l-4 border-l-[#5b2d8e] flex-1">
-                    <img src="/icon-4-right.png" class="w-12 h-12 shrink-0 object-contain" alt="icon">
-                    <div>
-                        <div class="font-bold text-gray-800 uppercase text-sm mb-1">03. Miễn phí vận chuyển</div>
-                        <p class="text-gray-500 text-sm">Giảm 10% tổng đơn hàng khi đặt từ 2 dịch vụ, miễn phí vận chuyển trong bán kính 10km.</p>
-                    </div>
-                </div>
+                @empty
+                <p class="text-gray-400 text-sm">Chưa có chương trình khuyến mãi.</p>
+                @endforelse
             </div>
         </div>
 
