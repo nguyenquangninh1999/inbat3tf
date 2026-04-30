@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', config('app.name') . ' - Xưởng In Bạt Quảng Cáo Lớn Nhất Miền Bắc')</title>
     <meta name="description" content="@yield('description', 'Nhà máy in 3TF - Xưởng in bạt quảng cáo lớn nhất miền Bắc. Chuyên in UV, in bạt, in decal, cắt CNC, cắt mica. Cam kết chất lượng, giá tốt nhất.')">
-    <meta name="keywords" content="@yield('keywords', 'in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica, in canvas, nhà máy in BC, xưởng in hà nội')">
+    <meta name="keywords" content="@yield('keywords', 'in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica, in canvas, nhà máy in 3TF, xưởng in hà nội')">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="@yield('title', config('app.name') . ' - Xưởng In Bạt Quảng Cáo Lớn Nhất Miền Bắc')">
     <meta property="og:description" content="@yield('description', 'Nhà máy in 3TF - Xưởng in bạt quảng cáo lớn nhất miền Bắc.')">
