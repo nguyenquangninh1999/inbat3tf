@@ -150,6 +150,8 @@
             <style>
                 .price-content table { width:100%; border-collapse:collapse; margin-bottom:24px; }
                 .price-content td, .price-content th { border:1px solid #d1d5db; padding:8px 12px; }
+                .price-content th { background:#f3f4f6; font-weight:600; }
+                .price-content strong, .price-content b { font-weight:700 !important; }
             </style>
             @foreach($prices as $price)
                 <div class="price-content mb-8">
