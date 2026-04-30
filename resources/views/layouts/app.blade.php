@@ -3,7 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name') }}</title>
+    <title>@yield('title', config('app.name') . ' - Xưởng In Bạt Quảng Cáo Lớn Nhất Miền Bắc')</title>
+    <meta name="description" content="@yield('description', 'Nhà máy in 3TF - Xưởng in bạt quảng cáo lớn nhất miền Bắc. Chuyên in UV, in bạt, in decal, cắt CNC, cắt mica. Cam kết chất lượng, giá tốt nhất.')">
+    <meta name="keywords" content="@yield('keywords', 'in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica, in canvas, nhà máy in BC, xưởng in hà nội')">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="@yield('title', config('app.name') . ' - Xưởng In Bạt Quảng Cáo Lớn Nhất Miền Bắc')">
+    <meta property="og:description" content="@yield('description', 'Nhà máy in 3TF - Xưởng in bạt quảng cáo lớn nhất miền Bắc.')">
+    <meta property="og:image" content="@yield('og_image', asset('favicon.svg'))">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <link rel="canonical" href="{{ url()->current() }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">

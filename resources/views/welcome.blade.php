@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Nhà Máy In 3TF - Xưởng In Bạt Quảng Cáo Lớn Nhất Miền Bắc')
+@section('description', 'Nhà máy in 3TF chuyên in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica. Cam kết chất lượng, giao hàng nhanh, giá tốt nhất thị trường Miền Bắc.')
+@section('keywords', 'in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica, in canvas, nhà máy in 3TF, xưởng in hà nội, in bạt giá rẻ')
+
 @section('content')
 
 <!-- Carousel -->
