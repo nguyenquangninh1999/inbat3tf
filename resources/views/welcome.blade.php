@@ -87,12 +87,12 @@
                         <div class="text-xs text-orange-500 leading-tight">Tư vấn miễn phí</div>
                     </div>
                 </a>
-                <a href="tel:0987654321" class="flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-3 hover:shadow transition">
+                <a href="tel:{{ $setting->phone }}" class="flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-3 hover:shadow transition">
                     <div class="w-9 h-9 bg-orange-500 rounded-full flex items-center justify-center shrink-0">
                         <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
                     </div>
                     <div class="min-w-0">
-                        <div class="font-bold text-gray-800 text-xs leading-tight">0987654321</div>
+                        <div class="font-bold text-gray-800 text-xs leading-tight">{{ $setting->phone }}</div>
                         <div class="text-xs text-orange-500 leading-tight">Hotline 24/7</div>
                     </div>
                 </a>
@@ -168,9 +168,9 @@
 
         <!-- CTA buttons -->
         <div class="flex gap-3 justify-center">
-            <a href="tel:0987654321" class="flex items-center gap-2 bg-red-500 text-white font-semibold px-4 md:px-6 py-3 rounded-full hover:bg-red-600 transition shadow text-sm md:text-base whitespace-nowrap">
+            <a href="tel:{{ $setting->phone }}" class="flex items-center gap-2 bg-red-500 text-white font-semibold px-4 md:px-6 py-3 rounded-full hover:bg-red-600 transition shadow text-sm md:text-base whitespace-nowrap">
                 <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-                0987654321
+                {{ $setting->phone }}
             </a>
             <a href="#" onclick="openPopup(); return false;" class="flex items-center gap-2 bg-orange-500 text-white font-semibold px-4 md:px-6 py-3 rounded-full hover:bg-orange-600 transition shadow text-sm md:text-base whitespace-nowrap">
                 <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
@@ -302,9 +302,9 @@
 
         <!-- CTA buttons -->
         <div class="flex gap-3 justify-center">
-            <a href="tel:0987654321" class="flex items-center gap-2 bg-red-500 text-white font-semibold px-5 py-3 rounded-full hover:bg-red-600 transition shadow text-sm whitespace-nowrap">
+            <a href="tel:{{ $setting->phone }}" class="flex items-center gap-2 bg-red-500 text-white font-semibold px-5 py-3 rounded-full hover:bg-red-600 transition shadow text-sm whitespace-nowrap">
                 <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-                0987654321
+                {{ $setting->phone }}
             </a>
             <a href="#" onclick="openPopup(); return false;" class="flex items-center gap-2 bg-orange-500 text-white font-semibold px-5 py-3 rounded-full hover:bg-orange-600 transition shadow text-sm whitespace-nowrap">
                 <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>

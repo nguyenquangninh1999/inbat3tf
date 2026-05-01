@@ -26,14 +26,16 @@ class ConsultationController extends Controller
             'status' => 1,
         ]);
 
-        // Gửi email
-        $to = config('mail.from.address');
-        Mail::to($to)->send(new ConsultationMail(
-            $request->name,
-            $request->phone,
-            $request->email,
-            $request->note,
-        ));
+        // Gửi email chỉ khi settings có send_email
+        $setting = \App\Models\Setting::get();
+        if ($setting->send_email) {
+            Mail::to($setting->send_email)->send(new ConsultationMail(
+                $request->name,
+                $request->phone,
+                $request->email,
+                $request->note,
+            ));
+        }
 
         return response()->json(['success' => true]);
     }

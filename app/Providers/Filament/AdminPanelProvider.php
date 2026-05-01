@@ -32,9 +32,9 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Nhà máy in 3TF')
-            ->brandLogo(asset('favicon.svg'))
+            ->brandLogo(fn() => \App\Models\Setting::get()->logo ? asset('storage/' . \App\Models\Setting::get()->logo) : asset('favicon.svg'))
             ->brandLogoHeight('2rem')
-            ->favicon(asset('favicon.svg'))
+            ->favicon(fn() => \App\Models\Setting::get()->logo ? asset('storage/' . \App\Models\Setting::get()->logo) : asset('favicon.svg'))
             ->userMenuItems([
                 MenuItem::make()
                     ->label('Cài đặt')
