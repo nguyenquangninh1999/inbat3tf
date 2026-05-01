@@ -7,11 +7,23 @@
     <meta name="description" content="@yield('description', 'Nhà máy in 3TF - Xưởng in bạt quảng cáo lớn nhất miền Bắc. Chuyên in UV, in bạt, in decal, cắt CNC, cắt mica. Cam kết chất lượng, giá tốt nhất.')">
     <meta name="keywords" content="@yield('keywords', 'in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica, in canvas, nhà máy in 3TF, xưởng in hà nội')">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#5b2d8e">
     <meta property="og:title" content="@yield('title', config('app.name') . ' - Xưởng In Bạt Quảng Cáo Lớn Nhất Miền Bắc')">
     <meta property="og:description" content="@yield('description', 'Nhà máy in 3TF - Xưởng in bạt quảng cáo lớn nhất miền Bắc.')">
     <meta property="og:image" content="@yield('og_image', asset('favicon.svg'))">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', config('app.name') . ' - Xưởng In Bạt Quảng Cáo Lớn Nhất Miền Bắc')">
+    <meta name="twitter:description" content="@yield('description', 'Nhà máy in 3TF - Xưởng in bạt quảng cáo lớn nhất miền Bắc.')">
+    <meta name="twitter:image" content="@yield('og_image', asset('favicon.svg'))">
+    <meta name="author" content="Nhà máy in 3TF">
+    <meta name="geo.region" content="VN-HN">
+    <meta name="geo.placename" content="Hà Nội">
     <link rel="canonical" href="{{ url()->current() }}">
     <link rel="icon" type="image/svg+xml" href="{{ $setting->logo ? asset('storage/' . $setting->logo) : asset('favicon.svg') }}">
     <link rel="shortcut icon" href="{{ $setting->logo ? asset('storage/' . $setting->logo) : asset('favicon.svg') }}">
@@ -78,6 +90,7 @@
         }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @yield('structured_data')
 </head>
 <body class="bg-white">
 

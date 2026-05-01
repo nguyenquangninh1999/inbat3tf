@@ -4,6 +4,30 @@
 @section('description', 'Nhà máy in 3TF chuyên in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica. Cam kết chất lượng, giao hàng nhanh, giá tốt nhất thị trường Miền Bắc.')
 @section('keywords', 'in bạt quảng cáo, in UV, in decal, cắt CNC, cắt mica, in canvas, nhà máy in 3TF, xưởng in hà nội, in bạt giá rẻ')
 
+@section('structured_data')
+<script type="application/ld+json">
+@verbatim
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nhà máy in 3TF",
+    "description": "Xưởng in bạt quảng cáo lớn nhất miền Bắc. Chuyên in UV, in bạt, in decal, cắt CNC, cắt mica.",
+@endverbatim
+    "url": "{{ url('/') }}",
+    "telephone": "{{ $setting->phone }}",
+@verbatim
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hà Nội",
+        "addressCountry": "VN"
+    },
+    "openingHours": "Mo-Su 07:00-21:00",
+    "priceRange": "VND"
+}
+@endverbatim
+</script>
+@endsection
+
 @section('content')
 
 <!-- Carousel -->

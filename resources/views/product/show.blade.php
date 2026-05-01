@@ -4,6 +4,36 @@
 @section('description', strip_tags(substr($product->description ?? '', 0, 160)))
 @section('og_image', $product->image ? asset('storage/' . $product->image) : asset('favicon.svg'))
 
+@section('structured_data')
+<script type="application/ld+json">
+@verbatim
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+@endverbatim
+    "name": "{{ $product->name }}",
+    "description": "{{ strip_tags($product->description ?? '') }}",
+    "image": "{{ $product->image ? asset('storage/' . $product->image) : asset('favicon.svg') }}",
+@verbatim
+    "offers": {
+        "@type": "Offer",
+@endverbatim
+        "price": "{{ $product->price }}",
+@verbatim
+        "priceCurrency": "VND",
+        "availability": "https://schema.org/InStock"
+    },
+    "brand": {
+        "@type": "Brand",
+@endverbatim
+        "name": "Nhà máy in 3TF"
+@verbatim
+    }
+}
+@endverbatim
+</script>
+@endsection
+
 @section('content')
 <section class="py-10 px-4 md:px-12 bg-white">
     <div class="max-w-7xl mx-auto">
