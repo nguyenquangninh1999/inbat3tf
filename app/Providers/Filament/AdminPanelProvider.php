@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Filament\Http\Middleware\Authenticate;
+use Filament\Navigation\MenuItem;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -34,6 +35,12 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogo(asset('favicon.svg'))
             ->brandLogoHeight('2rem')
             ->favicon(asset('favicon.svg'))
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('Cài đặt')
+                    ->icon('heroicon-o-cog-6-tooth')
+                    ->url('/admin/settings'),
+            ])
             ->colors([
                 'primary' => Color::Amber,
             ])
