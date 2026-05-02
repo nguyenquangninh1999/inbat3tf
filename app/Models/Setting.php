@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model
 {
-    protected $fillable = ['logo', 'phone', 'zalo', 'send_email'];
+    protected $fillable = ['logo', 'phone', 'zalo', 'send_email', 'address'];
 
     public static function get(): self
     {

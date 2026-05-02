@@ -52,6 +52,10 @@ class Settings extends Page implements HasForms
                     ->label('Email nhận tư vấn')
                     ->email()
                     ->maxLength(191),
+
+                TextInput::make('address')
+                    ->label('Địa chỉ')
+                    ->maxLength(500),
             ])
             ->statePath('data');
     }

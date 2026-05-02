@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ConsultationMail;
 use App\Models\Consultation;
+use App\Models\Setting;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+use Resend;
 
 class ConsultationController extends Controller
 {
@@ -26,15 +26,21 @@ class ConsultationController extends Controller
             'status' => 1,
         ]);
 
-        // Gửi email chỉ khi settings có send_email
-        $setting = \App\Models\Setting::get();
+        // Gửi email qua Resend nếu có send_email trong settings
+        $setting = Setting::get();
         if ($setting->send_email) {
-            Mail::to($setting->send_email)->send(new ConsultationMail(
-                $request->name,
-                $request->phone,
-                $request->email,
-                $request->note,
-            ));
+            // $resend = Resend::client(config('services.resend.api_key'));
+            // $resend->emails->send([
+            //     'from'    => 'onboarding@resend.dev',
+            //     'to'      => $setting->send_email,
+            //     'subject' => 'Tư vấn báo giá',
+            //     'html'    => view('emails.consultation', [
+            //         'name'  => $request->name,
+            //         'phone' => $request->phone,
+            //         'email' => $request->email,
+            //         'note'  => $request->note,
+            //     ])->render(),
+            // ]);
         }
 
         return response()->json(['success' => true]);

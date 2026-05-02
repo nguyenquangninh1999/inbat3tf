@@ -194,10 +194,10 @@
             <p class="text-xs text-purple-300 uppercase mb-1">Xưởng in bạt quảng cáo – Nhà máy in 3TF</p>
             <p class="text-base font-bold uppercase text-white mb-4">Công ty TNHH In 3TF</p>
             <div class="space-y-2 text-sm text-purple-200">
-                <div class="flex items-start gap-2"><span>📍</span><span>Địa chỉ: THÚY LĨNH, LĨNH NAM, HN</span></div>
+                <div class="flex items-start gap-2"><span>📍</span><span>Địa chỉ: {{ $setting->address ?? '' }}</span></div>
                 <div class="flex items-center gap-2"><span>📞</span><span>Hotline: {{ $setting->phone ?? '' }}</span></div>
-                <div class="flex items-center gap-2"><span>✉️</span><span>Email: info@inbat3tf.com</span></div>
-                <div class="flex items-center gap-2"><span>🌐</span><span>Website: www.inbat3tf.com</span></div>
+                <div class="flex items-center gap-2"><span>✉️</span><span>Email: {{ $setting->send_email ?? '' }}</span></div>
+                <div class="flex items-center gap-2"><span>🌐</span><span>Website: https://inbat3tf.com/</span></div>
             </div>
         </div>
 
