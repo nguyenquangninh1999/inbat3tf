@@ -29,18 +29,18 @@ class ConsultationController extends Controller
         // Gửi email qua Resend nếu có send_email trong settings
         $setting = Setting::get();
         if ($setting->send_email) {
-            // $resend = Resend::client(config('services.resend.api_key'));
-            // $resend->emails->send([
-            //     'from'    => 'onboarding@resend.dev',
-            //     'to'      => $setting->send_email,
-            //     'subject' => 'Tư vấn báo giá',
-            //     'html'    => view('emails.consultation', [
-            //         'name'  => $request->name,
-            //         'phone' => $request->phone,
-            //         'email' => $request->email,
-            //         'note'  => $request->note,
-            //     ])->render(),
-            // ]);
+            $resend = Resend::client(config('services.resend.api_key'));
+            $resend->emails->send([
+                'from'    => 'no-reply@inbat3tf.com',
+                'to'      => $setting->send_email,
+                'subject' => 'Tư vấn báo giá',
+                'html'    => view('emails.consultation', [
+                    'name'  => $request->name,
+                    'phone' => $request->phone,
+                    'email' => $request->email,
+                    'note'  => $request->note,
+                ])->render(),
+            ]);
         }
 
         return response()->json(['success' => true]);
